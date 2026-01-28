@@ -1,65 +1,78 @@
-import Image from "next/image";
+//import Footer from "./components/Footer";
+
+
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main className="min-h-screen bg-black text-white font-[Montserrat] flex items-center justify-center">
+      <div
+        className="
+    grid-rows-2
+    grid grid-cols-3 gap-4
+    w-[90%]
+    h-[60vh]
+    text-[#c7924a]
+    gap-x-6         // khoảng cách giữa col1-2 và col2-3 = 40px
+    gap-y-6
+    justify-items-end    // col3 sát phải
+  "
+      >
+        {/* Ô 1 – HÌNH CĂN TRÁI */}
+        <div className="col-span-1.5 flex items-start justify-start">
+          <img
+            src="/vercel.svg"
+            alt="vercel logo"
+            className="w-10 h-10 object-contain"
+          />
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        {/* Ô 2 – LIST A,B,C,D CĂN TRÁI */}
+        <div className="flex flex-col items-start justify-start space-y-1 text-sm tracking-wide">
+          <span>BIKES</span>
+          <span>BIKES</span>
+          <span>BIKES</span>
+          <span>BIKES</span>
         </div>
-      </main>
-    </div>
+
+        {/* Ô 3 – GIÁ TRỊ LIÊN TỤC A,B,C */}
+        <div className="flex items-start gap-6">
+
+          <span> <img src="/vercel.svg" alt="vercel logo" className="w-10 h-10 object-contain" />
+          </span>
+
+          <span> <img src="/vercel.svg" alt="vercel logo" className="w-10 h-10 object-contain" />
+          </span>
+
+          <span> <img src="/vercel.svg" alt="vercel logo" className="w-10 h-10 object-contain" />
+          </span>
+
+        </div>
+
+        {/* Ô 4 – LIST A,B,C,D (HÀNG 2) */}
+        <div className="col-start-1 col-end-3 flex flex-col items-start justify-start space-y-1 text-sm tracking-wide">
+          <span>ALL RIGHTS RESERVED</span>
+          <span>© BASTION CYCLES 2026</span>
+        </div>
+
+        {/* Ô 5 – LIST A,B,C,D (HÀNG 2) */}
+        <div className="flex flex-col items-start justify-start space-y-1 text-sm tracking-wide">
+          <span>TERMS & CONDITIONS</span>
+          <span>PRIVACY POLICY</span>
+        </div>
+
+        {/* Ô 6 – GIÁ TRỊ LIÊN TỤC A,B,C (HÀNG 2) */}
+        <div className="flex items-start justify-start text-sm tracking-[0.25em]">
+          <span>BACK TO TOP</span>
+        </div>
+
+
+
+        {/* BIG TEXT ROW */}
+        <div className="col-span-4 flex items-center justify-center text-8xl font-bold text-orange-300">
+          A BOLD NEW ERA
+        </div>
+      </div>
+    </main>
   );
 }
+
