@@ -8,17 +8,17 @@ export default function Home() {
       <div
         className="
     grid-rows-2
-    grid grid-cols-3 gap-4
+    grid grid-cols-5 gap-4
     w-[90%]
     h-[60vh]
     text-[#c7924a]
     gap-x-6         // khoảng cách giữa col1-2 và col2-3 = 40px
     gap-y-6
-    justify-items-end    // col3 sát phải
+    justify-items-start    // col3 sát phải
   "
       >
         {/* Ô 1 – HÌNH CĂN TRÁI */}
-        <div className="col-span-1.5 flex items-start justify-start">
+        <div className="col-span-3">
           <img
             src="/vercel.svg"
             alt="vercel logo"
@@ -49,7 +49,7 @@ export default function Home() {
         </div>
 
         {/* Ô 4 – LIST A,B,C,D (HÀNG 2) */}
-        <div className="col-start-1 col-end-3 flex flex-col items-start justify-start space-y-1 text-sm tracking-wide">
+        <div className="col-span-3 flex flex-col items-start justify-start space-y-1 text-sm tracking-wide">
           <span>ALL RIGHTS RESERVED</span>
           <span>© BASTION CYCLES 2026</span>
         </div>
@@ -68,7 +68,7 @@ export default function Home() {
 
 
         {/* BIG TEXT ROW */}
-        <div className="col-span-4 flex items-center justify-center text-8xl font-bold text-orange-300">
+        <div className="col-span-5 flex items-center justify-center text-8xl font-bold text-orange-300">
           A BOLD NEW ERA
         </div>
       </div>
